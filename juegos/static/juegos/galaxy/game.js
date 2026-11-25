@@ -64,7 +64,8 @@ function update() {
         return;
     }
     moverNave();
-    if (Phaser.Input.Keyboard.JustDown(teclaEspacio)) {
+    // "teclaEspacio &&" evita un error mientras todavía no se hizo el TODO 3 (así el juego se ve desde el principio).
+    if (teclaEspacio && Phaser.Input.Keyboard.JustDown(teclaEspacio)) {
         disparar();
     }
     moverBalas();
